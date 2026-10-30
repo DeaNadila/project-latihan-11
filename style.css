@@ -1,0 +1,240 @@
+```css
+/* Reset & Font Utama */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #FFF8ED;
+    color: #76565A;
+}
+
+/* Header & Navigasi */
+header {
+    background: linear-gradient(135deg, #EFAFC2, #D98FA8);
+    color: #FFF8ED;
+    text-align: center;
+    padding: 2.5rem 1rem;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+header p {
+    color: #FFF3F3;
+    margin-top: 5px;
+}
+
+nav {
+    background-color: #D98FA8;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 14px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px -1px rgba(150, 90, 105, 0.15);
+}
+
+nav a {
+    color: #FFF8ED;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #7B4655;
+}
+
+/* Container Utama */
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Section Banner */
+.banner {
+    background: #FFFCF7;
+    padding: 35px 25px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(217, 143, 168, 0.12);
+    margin-bottom: 35px;
+    border: 1px solid #F8DCE4;
+}
+
+.banner h2 {
+    color: #C77994;
+    margin-bottom: 8px;
+}
+
+.banner p {
+    color: #76565A;
+    margin-bottom: 20px;
+}
+
+/* Section Produk */
+#produk {
+    background-color: #FFFCF7;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(217, 143, 168, 0.12);
+    margin-bottom: 35px;
+    border: 1px solid #F8DCE4;
+}
+
+#produk h2 {
+    font-size: 1.5rem;
+    color: #C77994;
+    margin-bottom: 18px;
+}
+
+/* Area Daftar Produk */
+.daftar-produk {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    padding: 15px;
+    background-color: #FFF5F2;
+    border-radius: 14px;
+    border: 1px solid #F8DCE4;
+    scroll-snap-type: x mandatory;
+}
+
+/* Desain Kotak Produk */
+.produk {
+    flex: 0 0 260px;
+    scroll-snap-align: start;
+    background: #FFFCF7;
+    border: 2px solid #F3D1DC;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(217, 143, 168, 0.10);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+/* Efek Hover Produk */
+.produk:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px rgba(217, 143, 168, 0.20);
+    border-color: #D98FA8;
+}
+
+.produk h3 {
+    font-size: 1.2rem;
+    color: #C77994;
+    margin-bottom: 8px;
+}
+
+.produk p {
+    font-size: 0.9rem;
+    color: #76565A;
+    margin-bottom: 10px;
+}
+
+.produk .harga {
+    font-weight: 700;
+    color: #C77994;
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+}
+
+/* Desain Tombol */
+.tombol, .produk button {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #D98FA8;
+    color: #FFF8ED;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px -1px rgba(217, 143, 168, 0.30);
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 15px;
+}
+
+/* Efek Hover Tombol */
+.tombol:hover, .produk button:hover {
+    background-color: #C77994;
+    box-shadow: 0 6px 12px rgba(199, 121, 148, 0.35);
+    color: #ffffff;
+}
+
+/* Efek Active Tombol */
+.tombol:active, .produk button:active {
+    background-color: #B96D88;
+    transform: scale(0.95);
+}
+
+/* Gambar Produk */
+.produk img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 1px solid #F8DCE4;
+    background-color: #FFF8ED;
+}
+
+/* Tampilan Scrollbar */
+.daftar-produk::-webkit-scrollbar {
+    height: 10px;
+}
+
+.daftar-produk::-webkit-scrollbar-track {
+    background: #F8DCE4;
+    border-radius: 10px;
+}
+
+.daftar-produk::-webkit-scrollbar-thumb {
+    background: #E8AFC1;
+    border-radius: 10px;
+}
+
+.daftar-produk::-webkit-scrollbar-thumb:hover {
+    background: #D98FA8;
+}
+
+/* Section Tentang & Kontak */
+.tentang, .kontak {
+    background: #FFFCF7;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    border: 1px solid #F8DCE4;
+    box-shadow: 0 4px 6px rgba(217, 143, 168, 0.10);
+}
+
+.tentang h2, .kontak h2 {
+    color: #C77994;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #D98FA8;
+    color: #FFF8ED;
+    margin-top: 40px;
+}
+```
